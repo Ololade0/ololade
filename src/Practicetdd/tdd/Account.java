@@ -7,15 +7,16 @@ public class Account {
         return balance;
     }
 
-    public void deposit(int amount) {
+    public double deposit(int amount) {
 
-        balance += amount;
+        balance = balance + amount;
+        return 0;
     }
 
     public void withdraw(int amount) {
-        if(amount == balance) {
-        }
-        balance = balance - amount;
+        if(balance - amount >= 0) {
+
+        balance = balance - amount;}
 
     }
 }
