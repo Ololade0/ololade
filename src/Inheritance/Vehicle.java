@@ -11,6 +11,7 @@ public class Vehicle {
     }
 
     void move(){
-        System.out.println("This vehicle is moving");
+        System.out.println("This vehicle is moving" +
+                "");
     }
 }

@@ -1,6 +1,47 @@
-//package SnakeGameWork;
-//
-//public class Snake {
+package SnakeGameWork;
+
+public class SnakeGame {
+    public static void main(String[] args) {
+        new GameFrame();
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//}
 //    class SnakeGame {
 //
 //        public static void main(String[] args) {

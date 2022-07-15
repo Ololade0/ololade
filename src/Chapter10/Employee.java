@@ -38,7 +38,7 @@ public Employee(String firstName,String lastName,String socialSecurityNumber) {
 
     @Override
     public String toString(){
-    return String.format("%s %s%nsocial security number: %s", getFirstName(),getLastName(), getSocialSecurityNumber());
+    return String.format("%s %s%n social security number: %s", getFirstName(),getLastName(), getSocialSecurityNumber());
 
     }
 

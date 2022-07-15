@@ -1,8 +1,9 @@
 package SchoolManagementSystem;
 
-//package SchoolManagementSystem;
+
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 class DriversClass {
@@ -28,8 +29,8 @@ class DriversClass {
                         5-> press 5 to exit
                         """);
         int studentPage = scanner.nextInt();
-        switch (studentPage) {
 
+        switch (studentPage) {
 
             case 1 -> {
                 System.out.println("Enter name ");
@@ -41,45 +42,110 @@ class DriversClass {
                 System.out.println("Enter student gender: ");
                 String gender = scanner.next();
                 student = new Student(studentName, gender, studentAge, studentId);
-                // System.exit(0);
                 studentPage();
             }
 
 
             case 2 -> {
-                System.out.println("select Subject");
-                String english = scanner.next();
-
-
-                System.out.println("select Subject");
-                String math = scanner.next();
-
-                System.out.println("select Subject");
-                String theology = scanner.next();
-
-                System.out.println("select Subject");
-                String python = scanner.next();
-
-                System.out.println("select Subject");
-                String java = scanner.next();
-
-                System.out.println("All courses has been selected");
+                System.out.println("Enter list of courseName and courseid");
                 scanner.nextLine();
+                System.out.println("Enter courseid");
+                String courseName1 = scanner.nextLine();
+                scanner.nextLine();
+                Course course = new Course("CourseName1", true, 101);
+                student.getselectCourse(courseName1);
+                for (int i = 0; i < student.getListOfCourse().size() ; i++) {
+               System.out.printf("""
+                            CourseName : %s
+                            Course Id: %s
+                            
+                            
+//                         
+//                            """, student.getListOfCourse().get(i).getCourseName(), student.getselectCourse(courseName1));
+//
+            }
 
-             //   Course course = new Course("English,math,Theology,Python", true, 002);
-                // System.exit(0);
-                studentPage();
-
-
-
+//                System.out.println("Enter Subject and courseId");
+//                String math = scanner.nextLine();
+//                scanner.nextLine();
+//
+//                System.out.println("Enter Subject and courseId");
+//                String python = scanner.nextLine();
+//                scanner.nextLine();
+//
+//                System.out.println("Enter Subject and courseId");
+//                String Database = scanner.nextLine();
+//                scanner.nextLine();
+//
+//                System.out.println("All courses has been selected");
+//                course = new Course("english, math, python, Database", true,101);
+//                student.getListOfCourse();
+//                student.getselectCourse("english, math, python, Database");
+//                studentPage();
 
             }
-             case 3 -> {
-                System.out.println("View all course");
-                String view = scanner.next();
-                studentPage();
+//
+//            ArrayList<Course> listOfCourses = school.getMyCourse();
+////
+//            for (int i = 0; i < listOfCourses.size(); i++) {
+//                System.out.printf("""
+//                            Course Name: %s
+//                            Course Id : %d
+//                            """, school.getMyCourse().get(i).getCourseName(), school.getMyCourse().get(i).getCourseId());
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//            System.out.println("Enter course name: ");
+//            String courseName = scanner.next();
+//            System.out.println("Enter course id: ");
+//            int courseId = scanner.nextInt();
+//            System.out.println("Enter course status: ");
+//            boolean courseStatus = scanner.nextBoolean();
+//            Course course = new Course(courseName, courseStatus,courseId);
+//            school.createCourse(course);
+//            for (int i = 0; i < school.getMyCourse().size() ; i++) {
+//                System.out.printf("""
+//                            CourseName : %s
+//                            Course Id: %d
+//
+//
+//
+//                            """, school.getMyCourse().get(i).getCourseName(), school.getMyCourse().get(i).getCourseId());
+//
+//            }
+//
+//
+//
+//
+//
+//
+//
 
-            }
+
+
+
+
+                case 3 -> {
+                    ArrayList<Course> listOfCourse = student.getListOfCourse();
+                    for (int i = 0; i < listOfCourse.size(); i++) {
+                        System.out.printf("""
+                                Course Name: %s
+                                Course Id : %d
+                                """, student.getListOfCourse().get(i).getCourseName(), student.getListOfCourse().get(i).getCourseId());
+
+//                 for (int i = 0; i < student.getListOfCourse().size() ; i++) {
+//
+//                     System.out.printf("""
+//                             courseName : %s
+//                             course Id : %s
+//                             course mimo : %s
+//
+//                             """, student.getListOfCourse().get(i).getCourseId(),course.getCourseId(),
+//                             course.getCourseName());
+//
+//                 }
+                        studentPage();
+
+                    }
+                }
 
             case 4 -> {
                 System.out.println("withdraw courses");
@@ -93,7 +159,8 @@ class DriversClass {
     }
 
 
-    //  }
+
+
 
 
     private static void adminPage() {
@@ -103,9 +170,10 @@ class DriversClass {
                         2-> press 2 to admit student
                         3-> press 3 to get all student
                         4-> press 4 to delete student
-                        5-> press 5 to delete course
-                        6-> press 6 to get all course
-                        7-> press 7 to exit
+                        5-> press 5 to create course
+                        6-> press 6 to delete course
+                        7-> press 7 to get all course
+                        8-> press 8 to exit
                         ->""");
 
         int adminPage = scanner.nextInt();
@@ -119,7 +187,7 @@ class DriversClass {
                 adminPage();
 
             }
-            //  System.exit(0);
+
 
 
             case 2 -> {
@@ -132,41 +200,106 @@ class DriversClass {
                 System.out.println("Enter student id");
                 int studentId = scanner.nextInt();
                 student = new Student(studentName, gender, studentAge, studentId);
+                school.admitStudent(student);
                 adminPage();
-             //   System.exit(0);
+
 
             }
 
             case 3 -> {
-                System.out.println("Enter the name of all student:");
-                String allStudent = scanner.next();
-                ArrayList<Student> myStudent;
+
+//                for (Student s : school.getmyStudent()) {
+//                    System.out.printf("""
+//                            Student Name: %s
+//                            ID: %d
+//                            Gender: %s
+//                            Age: %d
+//
+//                            """, s.getStudentName(), s.getStudentId(),s.getGender(),s.getStudentAge());
+//                }
+                for (int i = 0; i < school.getmyStudent().size(); i++) {
+
+                    System.out.printf("""
+                            Name: %s
+                            ID: %d
+                            gender: %s
+                            Age: %d
+                            
+                            
+                           
+                            """, school.getmyStudent().get(i).getStudentName(), school.getmyStudent().get(i).getStudentId()
+                            ,school.getmyStudent().get(i).getGender(), school.getmyStudent().get(i).getStudentAge());
+
+                }
                 adminPage();
             }
 
             case 4 -> {
-                System.out.println("Enter delete student: ");
-                String deleteStudent = scanner.next();
+                System.out.println("Enter student Id to delete: ");
+                int deleteStudent = scanner.nextInt();
+                for (int i = 0; i < school.getmyStudent().size() ; i++) {
+                    if(school.getmyStudent().get(i).getStudentId() == deleteStudent){
+                        school.getmyStudent().remove(school.getmyStudent().get(i));
+                    }
+                }
+                System.out.println("Student successfully deleted");
                 adminPage();
                 // student = new Student();
 
             }
 
             case 5 -> {
-                System.out.println("Enter delete course: ");
-                String deleteCourse = scanner.next();
+                System.out.println("Enter course name: ");
+                String courseName = scanner.next();
+                System.out.println("Enter course id: ");
+                int courseId = scanner.nextInt();
+                System.out.println("Enter course status: ");
+                boolean courseStatus = scanner.nextBoolean();
+                Course course = new Course(courseName, courseStatus,courseId);
+                school.createCourse(course);
+                for (int i = 0; i < school.getMyCourse().size() ; i++) {
+                    System.out.printf("""
+                            CourseName : %s
+                            Course Id: %d
+                            
+                            
+                         
+                            """, school.getMyCourse().get(i).getCourseName(), school.getMyCourse().get(i).getCourseId());
+
+                }
                 adminPage();
-                //  student = new Student();
 
             }
 
             case 6 -> {
-                System.out.println("Enter get all course ");
-                String getCourse = scanner.next();
+                System.out.println("Enter delete course: ");
+                String deleteCourse = scanner.next();
+                for (int i = 0; i < school.getMyCourse().size() ; i++) {
+                    if(Objects.equals(school.getMyCourse().get(i).getCourseName(), deleteCourse)){
+                        school.getMyCourse().remove(school.getMyCourse().get(i));
+
+                    }
+                }
+                System.out.println("Course successfully deleted");
+                adminPage();
+
+
+            }
+
+            case 7 -> {
+                ArrayList<Course> listOfCourses = school.getMyCourse();
+//
+                for (int i = 0; i < listOfCourses.size(); i++) {
+                    System.out.printf("""
+                            Course Name: %s
+                            Course Id : %d
+                            """, school.getMyCourse().get(i).getCourseName(), school.getMyCourse().get(i).getCourseId());
+
+                }
                 adminPage();
             }
 
-            case 7 -> userResponse();
+            case 8 -> userResponse();
 
         }
     }
@@ -182,14 +315,12 @@ class DriversClass {
         int userResponse = scanner.nextInt();
         while (sentinel != 0) {
             if (userResponse == 0) {
-                sentinel = 0;
+
+                System.exit(0);
             } else {
                 switch (userResponse) {
                     case 1 -> adminPage();
                     case 2 -> studentPage();
-                    case 0 -> System.exit(0);
-
-
                 }
             }
         }
@@ -201,4 +332,4 @@ class DriversClass {
 
 
 
-//}
+

@@ -1,4 +1,4 @@
-package dsa;
+package DataStructureAndAlgorith;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,7 +27,7 @@ class ListTest {
     public void addItem_removeItem_listIsEmptyTest(){
         list.add("E-String");
         list.remove("E-String");
-        assertFalse(list.isEmpty());
+        assertTrue(list.isEmpty());
 
     }
 
@@ -40,7 +40,7 @@ class ListTest {
     void addX_addY_sizeIsTwoTest(){
         list.add("G-String");
         list.add("A-String");
-        assertEquals(1, list.size());
+        assertEquals(2, list.size());
     }
 
     @Test
@@ -90,7 +90,6 @@ class ListTest {
         list.add("C-String");
         list.add("A-String");
         list.add("C-String");
-       // list.add("G-String");
         list.remove("A-String");
         String item = list.get(1);
         assertEquals("C-String", item);

@@ -3,7 +3,6 @@ package DiaryMangementSystem;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Diary {
 
@@ -80,5 +79,7 @@ public class Diary {
         return String.format("%s%n%s%n%s", diaryName , dateTime, myEntry.size());
     }
 }
+
+
 
 

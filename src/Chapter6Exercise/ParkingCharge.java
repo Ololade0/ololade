@@ -1,10 +1,18 @@
-//package Chapter6Exercise;
+package Chapter6Exercise;
 //
-//import java.util.Scanner;
+
 //
 //public class ParkingCharge {
 //    public static double main(String[] args) {
 //        Scanner input = new Scanner(System.in);
+//        int count = 0;
+//
+//        while(true) {
+//
+//            System.out.println("Enter hours parked: ");
+//            int customer1 = input.nextInt();
+//
+//        }
 ////        double maximumCharges = 10.00;
 ////        double minimumCharges = 2.0;
 ////        double maxHour = 24.0;
@@ -47,7 +55,11 @@
 //                }
 //            }
 //            return charges;
-//        }
-//
+
+
+     //   return 0;
+    //}
+
+
 //}
 //

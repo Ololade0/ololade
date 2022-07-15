@@ -1,15 +1,16 @@
-package dsa;
+package DataStructureAndAlgorith;
+
+import java.util.Objects;
 
 public class ArrayList implements List {
- //   private boolean isEmpty = true;
     private int size;
     private String[] element = new String[5];
 
     @Override
     public boolean isEmpty(){
+
         return size == 0;
     }
-
 
     @Override
     public void add(String item){
@@ -20,27 +21,23 @@ public class ArrayList implements List {
         }
         element[size++] = item;
 
-
-
     }
     @Override
     public void remove(String item){
         for (int i = 0; i < element.length ; i++) {
-            if (element[i] == item) {
+            if (Objects.equals(element[i], item)) {
                 for (int j = i; j < size; j++) {
                     element[j] = element[j + 1];
 
                 }
-
             }
-            --size;
         }
-
+        --size;
     }
 
     @Override
     public int size() {
-        return 1;
+        return size;
     }
 
     @Override
@@ -53,4 +50,8 @@ public class ArrayList implements List {
         return element.length;
     }
 
+
 }
+
+
+

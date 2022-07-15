@@ -1,4 +1,4 @@
-package dsa;
+package DataStructureAndAlgorith;
 
 public interface List {
     boolean isEmpty();
