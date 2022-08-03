@@ -43,7 +43,7 @@ class CreditCardInformationTest {
 
 //    @Test
 //    void cardTypeCanBeTested() {
-//        assertSame("Master Card", card.getCardType());
+//        assertSame(CardType.MASTERCARD, card.getCardNumber());
 //    }
 
 

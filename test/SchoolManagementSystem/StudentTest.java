@@ -42,11 +42,12 @@ class StudentTest {
     void addCourse() {
         Course newCourse = new Course("Biology", true, 101);
         student.addNewCourse(newCourse);
-        assertEquals("Biology",student.getSelectCourse(101));
+        assertEquals("Biology",student.getAllSelectCourse(101));
     }
 
     @Test
      void selectCourse() {
+
         assertEquals("Theology", student.getselectCourse("Theology"));
     }
 

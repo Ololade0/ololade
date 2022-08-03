@@ -11,6 +11,7 @@ public class Student {
 
     private ArrayList<Course> listOfCourse;
 
+
     public Student(String studentName, String gender,int studentAge,int studentId){
 
         this.studentName = studentName;
@@ -47,9 +48,9 @@ public class Student {
 
 
     public void withdrawCourse(String courseName) {
-        for (int i = 0; i < listOfCourse.size(); i++) {
-            if(listOfCourse.get(i).getCourseName() == courseName) {
-                listOfCourse.remove(i);
+        for (Course course : listOfCourse){
+            if(course.getCourseName().equalsIgnoreCase(courseName)){
+                listOfCourse.remove(course);
             }
 
         }
@@ -57,8 +58,8 @@ public class Student {
     }
 
     public boolean confirmWithdraw(String courseName) {
-        for(int i = 0; i < listOfCourse.size(); i++) {
-            if (listOfCourse.get(i).getCourseName() == courseName)
+        for (Course course : listOfCourse) {
+            if (course.getCourseName() == courseName)
                 return false;
         }
         return true;
@@ -69,7 +70,7 @@ public class Student {
         listOfCourse.add(newCourse);
     }
 
-    public String getSelectCourse(int courseId) {
+    public String getAllSelectCourse(int courseId) {
         for (int i = 0; i < listOfCourse.size() ; i++) {
             if(listOfCourse.get(i).getCourseId() == courseId){
                 return listOfCourse.get(i).getCourseName();

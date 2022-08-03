@@ -63,6 +63,15 @@ class SchoolTest {
     }
 
     @Test
+    void getACourse() {
+        Course course1 = new Course("physics", true, 18);
+        Course course2 = new Course("biology", true, 19);
+        school.createCourse(course1);
+        school.createCourse(course2);
+        assertEquals("biology", school.getCourse("biology"));
+    }
+
+    @Test
     void getAllCourse(){
         assertNotNull(school.getMyCourse());
     }

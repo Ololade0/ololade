@@ -6,12 +6,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 public class Entry {
-//    Date date = new Date();
     private LocalDateTime dateTime = LocalDateTime.now();
     private UUID uuidAsString;
     private String title;
     private String body;
-    // private String id;
+
 
     public Entry(String title, String body){
         this.uuidAsString = UUID.randomUUID();

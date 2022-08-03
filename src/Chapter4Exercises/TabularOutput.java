@@ -2,40 +2,16 @@ package Chapter4Exercises;
 
 public class TabularOutput {
     public static void main(String[] args) {
-
-
-       // String N = "N";
-       // System.out.printf("%5N%10N%20N%20N"+ N,N,N,N);
-
-
-        String N = "N";
-        int count = 0;
-
-        while (count != 4) {
-            System.out.printf("%1s\t", N);
-            count++;
+        System.out.println("N\t\tN2\t\tN3\t\tN4\n");
+        int number = 1;
+        while (number <= 5){
+            int num2 = number * number;
+            int num3 = number * num2;
+            int num4 = number * num3;
+            System.out.println(number+"\t\t" + num2+"\t\t"+num3+"\t\t"+num4);
+            number++;
         }
 
-
-
-        for (int i = 0; i < 6; i++) {
-            System.out.println("" + (i));
-            count++;
-        }
-
-        for (int i = 1; i < 6; i++) {
-            System.out.printf("%4d%, 1", (i * i));
-            count++;
-        }
-
-
-        for (int i = 1; i < 6; i++) {
-            for (int j = 1; j < 5; j++) {
-
-                System.out.print("");
-            }
-            System.out.println();
-        }
 
     }
 }

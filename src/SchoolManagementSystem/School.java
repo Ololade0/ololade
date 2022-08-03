@@ -29,7 +29,6 @@ public class School {
 
 
     public void admitStudent(Student newStudent) {
-        // myStudent.add(student1);
         myStudent.add(newStudent);
 
 
@@ -75,16 +74,29 @@ public class School {
     }
 
     public ArrayList<Course> getMyCourse() {
-
         return myCourse;
     }
 
 
     public void createCourse(Course newCourse) {
+
         myCourse.add(newCourse);
     }
+
+    public Course getCourse(String courseName) {
+        for (Course course : myCourse) {
+            if (course.getCourseName().equalsIgnoreCase(courseName)) {
+                return course;
+            }
+
+        }
+        return null;
+
+
+    }
+
 }
 
 
-//}
+
 

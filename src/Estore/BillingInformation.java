@@ -6,7 +6,6 @@ public class BillingInformation {
     private String deliveryAddress;
 
     private CreditCardInformation [] myCard ;
-  //  private ArrayList<CreditCardInformation> myCard = new ArrayList();
 
     public BillingInformation(String name, String phoneNumber, String deliveryAddress) {
         this.name = name;

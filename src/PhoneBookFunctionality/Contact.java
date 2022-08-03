@@ -8,6 +8,7 @@ public class Contact {
     private String emailAddress;
 
 
+
     public Contact(String name, String number) {
         this.name = name;
         this.phoneNumber = number;
@@ -61,7 +62,5 @@ public class Contact {
                  """,getName(), getAddress(), getEmailAddress(), getPhoneNumber());
     }
 
-  //  public void setBody(String name) {
-    //    this.name = name;
-  //  }
+
 }

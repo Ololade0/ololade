@@ -2,6 +2,8 @@ package DataStructureAndAlgorith;
 
 public class Nodes {
     int data;
+
+    Nodes previous;
     Nodes next;
 
     public Nodes(int data) {
@@ -15,5 +17,9 @@ public class Nodes {
 
     public Nodes getNext() {
         return next;
+    }
+
+    public int getNodes(int data) {
+        return data;
     }
 }

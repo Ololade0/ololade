@@ -1,26 +1,29 @@
 package DataStructureAndAlgorith;
 
 public class LinkedList  {
-  private Nodes head;
+
+
+    private Nodes head;
+
   private int size;
 
 
-  public void add(int value){
+  public void addNodes(int value){
       Nodes node = new Nodes(value);
       node.setNext(head);
       head = node;
       size++;
   }
 
-  private int getSize(){
+  public int getSize(){
       return size;
   }
 
-  private boolean isEmpty(){
+  boolean isEmpty(){
       return head == null;
   }
 
-  private Nodes remove(){
+  public Nodes removeNodes(){
       Nodes removedNode = head;
       head = head.getNext();
       size--;
@@ -28,6 +31,9 @@ public class LinkedList  {
   }
 
 
+    public int getNodes(int value) {
+      return value;
+    }
 }
 
 

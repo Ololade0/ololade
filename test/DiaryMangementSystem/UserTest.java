@@ -10,7 +10,7 @@ class UserTest {
 
     @BeforeEach
     void setUp() {
-        user = new User("Jummy", "new diary");
+        user = new User("Jummy", "new diary", "123");
         Diary diary2 = new Diary("Hello Welcome to my diary");
         user.addNewDiary(diary2);
 
@@ -59,6 +59,7 @@ class UserTest {
     @Test
     void deleteDiaryCanBeTested(){
         user.deleteDiary("Ololades diary");
-        assertTrue(user.findDeleteDiary("Ololades diary"));
+        assertFalse(user.findDeleteDiary("Ololades diary"));
+        System.out.print("" + user.findDeleteDiary("lades diary"));
 }
 }

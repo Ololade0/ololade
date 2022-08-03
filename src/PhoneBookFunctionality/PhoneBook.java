@@ -5,7 +5,6 @@ import java.util.Objects;
 
 public class PhoneBook {
     private ArrayList<Contact> myArray = new ArrayList<>();
-    //private String contact;
 
     public PhoneBook() {
 
@@ -22,6 +21,7 @@ public class PhoneBook {
     }
 
     public Contact getContact(int index) {
+
         return myArray.get(index);
     }
 

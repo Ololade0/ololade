@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class User {
-    private String name;
-    private ArrayList<Diary> myUser;
-    private String createdDiary;
+    private final String name;
+    private final ArrayList<Diary> myUser;
+    private final String createdDiary;
+    private final String password;
 
-    public User(String name, String createDiary) {
+    public User(String name, String createDiary, String password) {
         this.name = name;
+        this.password = password;
         myUser = new ArrayList<>();
         this.createdDiary = createDiary;
     }
@@ -28,6 +30,7 @@ public class User {
         myUser.add(diary1);
     }
     public Diary ViewDiary(int index) {
+
         return myUser.get(index);
     }
 
@@ -46,14 +49,19 @@ public class User {
     }
 
     public boolean findDeleteDiary(String diaryName) {
+        // for (Diary diary : myUser) {
         for (Diary diary : myUser) {
-            if (diary.getDiaryName() == diaryName) ;
-            return true;
+            if (diary.getDiaryName() == diaryName) {
+                return true;
+            }
         }
-        return false;
+            return false;
+        }
+
+
+    public boolean checkPassword(String password) {
+        return Objects.equals(this.password, password);
     }
-
-
 }
 
 

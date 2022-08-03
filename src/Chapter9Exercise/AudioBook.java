@@ -1,4 +1,4 @@
-package Chapter10;
+package Chapter9Exercise;
 
 public class AudioBook extends Book {
     private int size;

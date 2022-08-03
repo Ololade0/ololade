@@ -16,6 +16,26 @@ public class Address {
         this.state = state;
     }
 
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
+    public void setHouseNumber(int houseNumber) {
+        this.houseNumber = houseNumber;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
     public String getCityName() {
         return cityName;
     }

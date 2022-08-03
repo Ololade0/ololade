@@ -29,9 +29,13 @@ public class Course {
         return courseId;
     }
 
-//    public void deactivatedCourseName(String theology) {
-//
-//    }
+public String toString(){
+        return String.format("""
+                CourseName : %s
+                CourseId : %d
+                
+                """, getCourseName(), getCourseId(), getCourseStatus());
+}
 }
 
 
