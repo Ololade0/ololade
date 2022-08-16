@@ -68,7 +68,7 @@ class SchoolTest {
         Course course2 = new Course("biology", true, 19);
         school.createCourse(course1);
         school.createCourse(course2);
-        assertEquals("biology", school.getCourse("biology"));
+        assertEquals("biology", school.findCourse(""));
     }
 
     @Test
