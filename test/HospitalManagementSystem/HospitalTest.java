@@ -22,6 +22,7 @@ class HospitalTest {
 
     @Test
     void hospitalLocationCanBeTested(){
+
         assertEquals("Sabo yaba", hospital.getHospitalLocation());
     }
     @Test
