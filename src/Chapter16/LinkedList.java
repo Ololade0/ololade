@@ -8,7 +8,7 @@ public class LinkedList {
 
         String[] colors =
                 {"black", "yellow", "green", "blue", "violet", "silver"};
-        List<String> list1 = new LinkedList<>();
+        List<String> list1 = (List<String>) new LinkedList();
 
         for (String color : colors) {
             list1.add(color);
@@ -16,7 +16,7 @@ public class LinkedList {
 
         String[] colors2 =
                 {"gold", "white", "brown", "blue", "gray", "silver"};
-        List<String> list2 = new LinkedList<>();
+        List<String> list2 = (List<String>) new LinkedList();
 
         for (String color : colors2) {
             list2.add(color);

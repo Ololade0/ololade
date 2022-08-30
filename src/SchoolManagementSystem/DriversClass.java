@@ -133,15 +133,6 @@ class DriversClass {
 
             case 3 -> {
 
-//                for (Student s : school.getmyStudent()) {
-//                    System.out.printf("""
-//                            Student Name: %s
-//                            ID: %d
-//                            Gender: %s
-//                            Age: %d
-//
-//                            """, s.getStudentName(), s.getStudentId(),s.getGender(),s.getStudentAge());
-//                }
                 for (int i = 0; i < school.getmyStudent().size(); i++) {
 
                     System.out.printf("""

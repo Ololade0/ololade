@@ -1,6 +1,5 @@
 public class Turtle {
-   // private  int row;
-  //  private int column;
+
     private boolean isPenUp = true;
     private Direction currentDirection = Direction.EAST;
     private int column;
