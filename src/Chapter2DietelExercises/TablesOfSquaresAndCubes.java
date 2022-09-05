@@ -1,4 +1,4 @@
-package Chapter2DietelExercise;
+package Chapter2DietelExercises;
 
 public class TablesOfSquaresAndCubes {
     public static void main(String[] args) {

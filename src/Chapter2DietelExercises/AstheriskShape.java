@@ -1,4 +1,4 @@
-package Chapter2DietelExercise;
+package Chapter2DietelExercises;
 
 import java.util.Scanner;
 

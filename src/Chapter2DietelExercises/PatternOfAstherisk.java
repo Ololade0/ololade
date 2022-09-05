@@ -1,4 +1,4 @@
-package Chapter2DietelExercise;
+package Chapter2DietelExercises;
 
 public class PatternOfAstherisk {
     public static void main(String[] args) {
